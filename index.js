@@ -53,3 +53,20 @@ const generateNameList = namesList => {
 const {largerNames, shorterNames} = generateNameList(nombres)
 console.log(largerNames)
 console.log(shorterNames)
+
+
+// Imprimir en consola/terminal "Hola, me llamo ${nombre}" en arcoiris
+const colors = require('colors')
+
+if(process.argv[2] !== undefined){
+    console.log(colors.rainbow(`Hola, me llamo ${process.argv[2]}`))
+    console.log(`Hola, me llamo ${process.argv[2]}`.rainbow)
+}
+
+const fs = require("fs")
+
+fs.readFile("/media/marco/Nuevo vol/Projects/Bootcamp_js_fullstack/19gjs/backend_module/textFile.txt", "utf-8",(err, data) =>{
+    if(err) throw err;
+
+    console.log(data)
+})
